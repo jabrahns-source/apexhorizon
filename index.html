@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexHorizon — Privacy-Absolute Financial Architecture</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="icon">◈</span> ApexHorizon
+    </div>
+    <p class="tagline">Elite financial architecture. Zero data leaves your device.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <h2>Architect Your Horizon</h2>
+      <div class="grid">
+        <label>Current Age <input type="number" id="currentAge" value="35" min="18" max="100"></label>
+        <label>Retirement Age <input type="number" id="retireAge" value="60" min="30" max="100"></label>
+        <label>Current Portfolio ($) <input type="number" id="portfolio" value="150000" min="0" step="1000"></label>
+        <label>Annual Contribution ($) <input type="number" id="contribution" value="25000" min="0" step="1000"></label>
+        <label>Expected Real Return (%) <input type="number" id="returnRate" value="7" min="-5" max="15" step="0.1"></label>
+        <label>Volatility (%) <input type="number" id="volatility" value="15" min="5" max="40" step="0.5"></label>
+        <label>Inflation (%) <input type="number" id="inflation" value="2.5" min="0" max="10" step="0.1"></label>
+        <label>Safe Withdrawal Rate (%) <input type="number" id="swr" value="4" min="2" max="6" step="0.1"></label>
+        <label>Simulations <input type="number" id="sims" value="1000" min="100" max="5000" step="100"></label>
+      </div>
+      <button id="run">Forge Horizon</button>
+      <button id="reset" class="secondary">Reset</button>
+    </section>
+
+    <section class="results" id="results" hidden>
+      <div class="metrics">
+        <div class="metric">
+          <span class="label">Success Probability</span>
+          <span class="value" id="successRate">—</span>
+        </div>
+        <div class="metric">
+          <span class="label">Median Terminal Wealth</span>
+          <span class="value" id="medianWealth">—</span>
+        </div>
+        <div class="metric">
+          <span class="label">10th Percentile</span>
+          <span class="value" id="p10">—</span>
+        </div>
+        <div class="metric">
+          <span class="label">90th Percentile</span>
+          <span class="value" id="p90">—</span>
+        </div>
+      </div>
+      <canvas id="chart"></canvas>
+      <div class="insights" id="insights"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ApexHorizon runs 100% client-side. Your numbers never leave this browser. Built for sovereign clarity.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
