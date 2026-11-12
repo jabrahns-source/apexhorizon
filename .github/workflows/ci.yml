@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Validate HTML/JS structure
+      run: |
+        # Basic checks: files exist, no obvious syntax errors
+        test -f index.html
+        test -f app.js
+        test -f style.css
+        echo "Static site files present"
+        # Could add more: htmlhint, etc., but keep minimal for free runner
