@@ -1,5 +1,7 @@
 # ApexHorizon
 
+[![CI](https://github.com/jabrahns-source/apexhorizon/actions/workflows/ci.yml/badge.svg)](https://github.com/jabrahns-source/apexhorizon/actions/workflows/ci.yml)
+
 **Privacy-absolute elite financial architecture engine.**
 
 100% client-side Monte Carlo simulation for retirement, FIRE, and wealth trajectory modeling. Zero data leaves your browser. No accounts. No permissions required.
@@ -16,3 +18,6 @@
 Static site. Works on any host. Open `index.html` locally or serve the directory.
 
 Built as a sovereign tool that sells itself through clarity and shareable results.
+
+## License
+Proprietary — Even The Odds Foundry LLC
